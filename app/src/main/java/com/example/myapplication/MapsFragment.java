@@ -34,12 +34,13 @@ public class MapsFragment extends Fragment {
     private double myLatitude;
     private double myLongitude;
     public static Marker marker;
-    private MarkerOptions markerOptions;
+    private MarkerOptions markerOptions = new MarkerOptions();
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
         @Override
         public void onMapReady(GoogleMap map) {
+
 
             LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
             long minTime = 2000;
@@ -50,15 +51,17 @@ public class MapsFragment extends Fragment {
                 return;
             }
             Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
             myLatitude = location.getLatitude();
             myLongitude = location.getLongitude();
-
+            LatLng myLocation = new LatLng(myLatitude, myLongitude);
+            map.addMarker(markerOptions.position(myLocation));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 16));
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, minTime, minDistance, locationListener);
 
             map.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
                 @Override
                 public void onMapClick(@NonNull @NotNull LatLng latLng) {
-                    markerOptions = new MarkerOptions();
                         marker = map.addMarker(markerOptions.position(latLng));
                         double myLat = latLng.latitude;
                         double myLng = latLng.longitude;
