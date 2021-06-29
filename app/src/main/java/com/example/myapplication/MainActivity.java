@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     fragment3 fragment3;
     fragment4 fragment4;
     fragment5 fragment5;
+    fragment6 fragment6;
+    fragment7 fragment7;
     MyPagerAdapter adapter;
 
     @Override
@@ -38,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem(fragment3);
         adapter.addItem(fragment4);
         adapter.addItem(fragment5);
-
+        adapter.addItem(fragment6);
+        adapter.addItem(fragment7);
         adapter.notifyDataSetChanged();
         pager.setCurrentItem(3);
 
@@ -75,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
         fragment3 = new fragment3();
         fragment4 = new fragment4();
         fragment5 = new fragment5();
+        fragment6 = new fragment6();
+        fragment7 = new fragment7();
 
         pager.setAdapter(adapter);
     }
