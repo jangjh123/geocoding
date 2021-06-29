@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment5">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:background="@color/orange"
+        android:layout_weight="6">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="매장명"
+            android:textColor="@color/white"
+            android:textSize="23dp"
+            android:gravity="center"
+            android:layout_marginVertical="20dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="매장주소"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/white"/>
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginVertical="10dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="매장번호"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bac"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/bac_orange"
+                    android:text="적립"
+                    android:textSize="17dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="카드"
+                    android:textSize="17dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="1%"
+                    android:textSize="17dp"
+                    android:background="@drawable/circle"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="현금"
+                    android:textSize="17dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="2.5%"
+                    android:background="@drawable/circle"
+                    android:textSize="17dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="적립금"
+                    android:textSize="17dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="2.5%"
+                    android:background="@drawable/circle"
+                    android:textSize="17dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="가맹점 소개"
+            android:gravity="center|left"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@color/black"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="메모"
+            android:textSize="17dp"
+            android:layout_marginHorizontal="20dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:background="@drawable/b">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="적립요청"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18dp"
+            style="bold"/>
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="10dp"
+            android:background="@color/white"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="쿠폰보기"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18dp"
+            style="bold"/>
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="10dp"
+            android:background="@color/white"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="마일리지 사용"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18dp"
+            style="bold"/>
+
+    </LinearLayout>
+</LinearLayout>

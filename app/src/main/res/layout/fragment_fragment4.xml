@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment4">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/orange"
+        android:layout_weight="1.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/bac"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:background="@drawable/bac_orange"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:text="현위치"
+                    android:textSize="17dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginVertical="5dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="17dp"
+                    android:text="최근내역"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="출발"
+                android:id="@+id/gogogo"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:background="@drawable/bac_orange"
+                android:layout_marginHorizontal="5dp"
+                android:textColor="@color/white"
+                android:text="출발지를 입력해주세요"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:gravity="center"
+                android:id="@+id/search_start"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@color/white"
+                android:text="검색"
+                android:background="@drawable/bac_orange"
+                android:layout_weight="2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="반경 : 2km 대기 : 운행 : 0"
+        android:gravity="center"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/blue"
+        android:layout_weight="1.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/bac_blue"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:background="@drawable/bac_blue"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:text="현위치"
+                    android:textSize="17dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:id="@+id/textView2"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginVertical="5dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="17dp"
+                    android:text="최근내역"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="도착"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:background="@drawable/bac_blue"
+                android:layout_marginHorizontal="5dp"
+                android:textColor="@color/white"
+                android:text="도착지를 입력해주세요"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@color/white"
+                android:text="검색"
+                android:background="@drawable/bac_blue"
+                android:layout_weight="2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="6">
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:background="@color/graywhite"
+            android:layout_weight="4">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="콜수"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="연락처"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="메모"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="기사성별"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="8">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="6">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="기본 요금은 8,000원 입니다."
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="04시부터 18시까지는 할증요금이 적용 됩니다."
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="예상금액"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:gravity="center"
+                android:hint="* 예상 금액은 운행 시 차이가 있을 수 있습니다."/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:layout_marginHorizontal="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/b"
+            android:text="대리운전 접수하기"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

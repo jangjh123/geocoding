@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".fragment2">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/graywhite"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="내 쿠폰 보기"
+            android:background="#1A303b"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:padding="15dp"
+            android:layout_weight="5"/>
+        <View
+            android:layout_width="0.1dp"
+            android:background="@color/white"
+            android:layout_height="15dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:text="위치 찾는 중 .."
+            android:gravity="center"
+            android:textSize="15dp"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:background="@color/main"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@color/graywhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="가맹점검색"
+            android:gravity="center"
+            android:padding="20dp"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:layout_marginHorizontal="10dp"
+            android:background="@null"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:weightSum="10"
+        android:background="@color/graywhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:text="정렬 방법"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="거리순"
+            android:textSize="13dp"
+            android:layout_weight="2"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="등록순"
+            android:textSize="13dp"
+            android:layout_weight="2"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="업체명"
+            android:textSize="13dp"
+            android:layout_weight="2"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"/>
+
+</LinearLayout>
