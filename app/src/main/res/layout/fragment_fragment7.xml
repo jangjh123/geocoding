@@ -4,8 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="5dp"
     tools:context=".fragment7">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include"/>
 
     <LinearLayout
         android:background="@drawable/b_square"
@@ -66,9 +70,10 @@
         android:background="@drawable/b_square"
         android:paddingTop="5dp">
 
-        <fragment
+        <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:layout_weight="4"/>
     </LinearLayout>
     <LinearLayout
@@ -200,7 +205,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="완료"
-            android:layout_marginRight="2.5dp"
+            android:layout_margin="2.5dp"
             android:background="@drawable/b"
             android:textSize="20dp"
             android:textColor="@color/white"/>
@@ -208,7 +213,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginLeft="2.5dp"
+            android:layout_margin="2.5dp"
             android:text="닫기"
             android:background="@drawable/b"
             android:textSize="20dp"

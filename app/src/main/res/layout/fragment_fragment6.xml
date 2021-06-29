@@ -5,12 +5,15 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".fragment6">
-
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include"/>
     <Button
         android:layout_width="match_parent"
         android:layout_marginHorizontal="5dp"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
+        android:layout_weight="1.5"
         android:text="현위치"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,11 +44,11 @@
             android:layout_marginRight="5dp"/>
     </LinearLayout>
 
-    <fragment
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="5dp"
-        android:layout_weight="13"/>
+        android:layout_weight="11"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -106,44 +109,45 @@
             android:checked="true"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight="2">
+        android:layout_weight="2.2"
+        android:orientation="horizontal">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10dp"
             android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/b"
+            android:padding="10dp"
             android:text="등록하기"
-            android:textSize="20dp"
             android:textColor="@color/white"
-            android:background="@drawable/b"/>
+            android:textSize="20dp" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10dp"
             android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/b"
+            android:padding="10dp"
             android:text="오더취소"
-            android:textSize="20dp"
             android:textColor="@color/white"
-            android:background="@drawable/b"/>
+            android:textSize="20dp" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10dp"
             android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/b"
+            android:padding="10dp"
             android:text="닫기"
-            android:textSize="20dp"
             android:textColor="@color/white"
-            android:background="@drawable/b"/>
+            android:textSize="20dp" />
 
     </LinearLayout>
 
