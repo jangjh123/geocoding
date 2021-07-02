@@ -28,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
     fragment8 fragment8;
     fragment9 fragment9;
     fragment10 fragment10;
+    fragment11 fragment11;
+    fragment12 fragment12;
+    fragment13 fragment13;
+    fragment14 fragment14;
+    fragment15 fragment15;
+    fragment16 fragment16;
+    fragment17 fragment17;
+    httpfragment httpfragment;
     MyPagerAdapter adapter;
 
     @Override
@@ -41,15 +49,18 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem(fragment1);
         adapter.addItem(fragment2);
         adapter.addItem(fragment3);
-        adapter.addItem(fragment4);
         adapter.addItem(fragment5);
-        adapter.addItem(fragment6);
+//        adapter.addItem(fragment6);
         adapter.addItem(fragment7);
         adapter.addItem(fragment8);
         adapter.addItem(fragment9);
         adapter.addItem(fragment10);
+        adapter.addItem(fragment11);
+        adapter.addItem(fragment14);
+        adapter.addItem(fragment15);
+        adapter.addItem(fragment16);
+        adapter.addItem(fragment17);
         adapter.notifyDataSetChanged();
-        pager.setCurrentItem(3);
 
     }
     private class MyPagerAdapter extends FragmentStatePagerAdapter {
@@ -89,18 +100,25 @@ public class MainActivity extends AppCompatActivity {
         fragment8 = new fragment8();
         fragment9 = new fragment9();
         fragment10 = new fragment10();
+        fragment11 = new fragment11();
+        fragment12 = new fragment12();
+        fragment13 = new fragment13();
+        fragment14 = new fragment14();
+        fragment15 = new fragment15();
+        fragment16 = new fragment16();
+        fragment17 = new fragment17();
+        httpfragment = new httpfragment();
 
         pager.setAdapter(adapter);
     }
     private void myGetIntent () {
         Intent intent = getIntent();
         if (intent != null) {
-            Double lat = intent.getDoubleExtra("Lat", 0);
-            Double lng = intent.getDoubleExtra("Lng", 0);
+            String result = intent.getStringExtra("result");
 
             Bundle bundle = new Bundle();
-            bundle.putDouble("Lat", lat);
-            bundle.putDouble("Lng", lng);
+            bundle.putString("result", result);
+
             fragment4.setArguments(bundle);
 
         }

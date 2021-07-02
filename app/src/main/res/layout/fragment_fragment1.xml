@@ -8,129 +8,170 @@
     tools:context=".MainActivity">
 
     <include
+        layout="@layout/include"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/include"/>
+        android:layout_marginBottom="5dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="#f39124"
-        android:layout_margin="5dp"
-        android:layout_weight="5"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
-        android:orientation="vertical">
+        android:background="@drawable/oragne_radious"
+        android:layout_marginHorizontal="10dp"
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:layout_weight="3">
+            android:layout_weight="3.5">
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="5"/>
+                android:layout_weight="1"
+                android:text="대리운전"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginVertical="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/prob_blue"/>
+
             <Button
                 android:layout_width="0dp"
-                android:layout_marginLeft="5dp"
                 android:layout_height="match_parent"
-                android:layout_weight="5"/>
+                android:layout_weight="1"
+                android:text="전국 꽃배달"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginVertical="15dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/prob_orange"/>
+
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="5">
+            android:layout_weight="2">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="0dp"
-                android:layout_weight="3">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Mileage"
-                    android:layout_weight="2"
-                    android:textSize="20dp"
-                    android:gravity="center"
-                    android:layout_gravity="left|center_vertical"
-                    android:layout_marginLeft="20dp"/>
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:gravity="right"
-                    android:layout_gravity="center_vertical"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:text="0"/>
-
-                <TextView
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="0dp"
-                    android:layout_height="20dp"
-                    android:layout_weight="1"/>
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="2"
-                    android:layout_gravity="center_vertical"/>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="마일리지"
+                android:layout_weight="2.3"
                 android:layout_marginHorizontal="20dp"
-                android:background="@color/black"/>
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@null"
+                android:text="0"
+                android:layout_marginVertical="10dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:gravity="right|center_vertical"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/circle"
+                android:layout_gravity="center"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2.5"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="출금요청"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:background="@drawable/choolguem_button"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/black"
+            android:layout_marginHorizontal="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="4.5">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_margin="5dp"
-                android:layout_weight="7"
-                android:orientation="horizontal">
-
+                android:layout_width="0dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2.5"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="10dp">
                 <Button
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/b"
-                    android:layout_marginHorizontal="1dp"
-                    android:layout_weight="2.5"/>
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/b"
-                    android:layout_marginHorizontal="1dp"
-                    android:layout_weight="2.5"/>
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="1dp"
-                    android:background="@drawable/b"
-                    android:layout_weight="2.5"/>
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_marginHorizontal="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/b"
-                    android:layout_weight="2.5"/>
+                    android:text="접수내역"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:background="@drawable/b"/>
 
             </LinearLayout>
 
-
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="2dp"
+                android:text="제휴사"
+                android:layout_weight="2.5"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:background="@drawable/b"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2.5"
+                android:text="추천인"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:background="@drawable/b"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:text="가맹점"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:background="@drawable/b"/>
 
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

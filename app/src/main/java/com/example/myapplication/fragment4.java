@@ -24,6 +24,7 @@ public class fragment4 extends Fragment {
     private TextView gogogo;
     private List<Address> list = null;
     private double lat, lng;
+    String result;
 
 
     private static final String ARG_PARAM1 = "param1";
@@ -76,9 +77,9 @@ public class fragment4 extends Fragment {
 
         Bundle bundle = getArguments();
         if (bundle != null) {
-            lat = bundle.getDouble("Lat");
-            lng = bundle.getDouble("Lng");
-            textView2.setText(lat + lng + "");
+            result = bundle.getString("result");
+
+            textView2.setText(result + "");
 
         } else {
             Toast.makeText(getActivity(), "null", Toast.LENGTH_SHORT).show();
@@ -87,19 +88,32 @@ public class fragment4 extends Fragment {
         gogogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Geocoder geocoder = new Geocoder(getActivity());
 
-                try {
-                    list = geocoder.getFromLocation(lat, lng, 1);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } if (list != null) {
-                    if (list.size() == 0) {
-                        Toast.makeText(getActivity(), "null", Toast.LENGTH_SHORT).show();
-                    } else {
-                        textView2.setText(list.get(0).getAddressLine(0));
+                Thread thread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Geocoder geocoder = new Geocoder(getActivity());
+
+                        try {
+                            list = geocoder.getFromLocation(lat, lng, 1);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                 if (list != null) {
+                                    if (list.size() == 0) {
+                                        Toast.makeText(getActivity(), "null", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        textView2.setText(list.get(0).getAddressLine(0));
+                                    }
+                                }
+                            }
+                        });
                     }
-                }
+                });
+                thread.start();
             }
         });
         return view;

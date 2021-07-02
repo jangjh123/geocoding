@@ -11,13 +11,17 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -29,11 +33,16 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.jetbrains.annotations.NotNull;
 
-public class MapsFragment extends Fragment {
+import java.io.IOException;
+import java.util.List;
 
+public class MapsFragment extends Fragment {
+    private List<Address> list = null;
     private double myLatitude;
     private double myLongitude;
+    private Handler handler = new Handler();
     public static Marker marker;
+    private String result;
     private MarkerOptions markerOptions = new MarkerOptions();
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
@@ -65,9 +74,21 @@ public class MapsFragment extends Fragment {
                         marker = map.addMarker(markerOptions.position(latLng));
                         double myLat = latLng.latitude;
                         double myLng = latLng.longitude;
+                    Geocoder geocoder = new Geocoder(getActivity());
+                    try {
+                        list = geocoder.getFromLocation(myLat, myLng, 1);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    if (list != null) {
+                        if (list.size() == 0) {
+                            Toast.makeText(getActivity(), "null", Toast.LENGTH_SHORT).show();
+                        } else {
+                            result = list.get(0).getAddressLine(0);
+                        }
+                    }
                         Intent intent = new Intent(getActivity().getBaseContext(), MainActivity.class);
-                        intent.putExtra("Lat", myLat);
-                        intent.putExtra("Lng", myLng);
+                        intent.putExtra("result", result);
                         getActivity().startActivity(intent);
                 }
             });

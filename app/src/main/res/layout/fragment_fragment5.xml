@@ -9,6 +9,7 @@
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         layout="@layout/include"/>
 
     <LinearLayout
@@ -92,11 +93,10 @@
                     android:gravity="center"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:text="1%"
-                    android:textSize="17dp"
+                    android:textSize="12dp"
                     android:background="@drawable/circle"
                     android:textColor="@color/white"
                     android:gravity="center"/>
@@ -110,12 +110,11 @@
                     android:gravity="center"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:text="2.5%"
+                    android:textSize="12dp"
                     android:background="@drawable/circle"
-                    android:textSize="17dp"
                     android:textColor="@color/white"
                     android:gravity="center"/>
 
@@ -129,14 +128,14 @@
                     android:gravity="center"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:text="2.5%"
+                    android:textSize="12dp"
                     android:background="@drawable/circle"
-                    android:textSize="17dp"
                     android:textColor="@color/white"
                     android:gravity="center"/>
+
 
 
 
