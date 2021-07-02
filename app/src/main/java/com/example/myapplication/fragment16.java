@@ -50,7 +50,6 @@ public class fragment16 extends Fragment implements View.OnClickListener {
         button3 = view.findViewById(R.id.button3);
         button4 = view.findViewById(R.id.button4);
 
-
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);

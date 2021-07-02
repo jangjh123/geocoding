@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ViewPager pager;
+    public static ViewPager pager;
     fragment1 fragment1;
     fragment2 fragment2;
     fragment3 fragment3;
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     fragment15 fragment15;
     fragment16 fragment16;
     fragment17 fragment17;
+    fragment18 fragment18;
     httpfragment httpfragment;
     MyPagerAdapter adapter;
 
@@ -50,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem(fragment2);
         adapter.addItem(fragment3);
         adapter.addItem(fragment5);
-//        adapter.addItem(fragment6);
         adapter.addItem(fragment7);
         adapter.addItem(fragment8);
         adapter.addItem(fragment9);
@@ -60,7 +60,10 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem(fragment15);
         adapter.addItem(fragment16);
         adapter.addItem(fragment17);
+        adapter.addItem(fragment18);
         adapter.notifyDataSetChanged();
+        pager.setCurrentItem(13);
+        pager.setPageTransformer(true, new ZoomOutPageTransformer());
 
     }
     private class MyPagerAdapter extends FragmentStatePagerAdapter {
@@ -85,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
         public int getCount() {
             return myList.size();
         }
+
+
+
     }
     private void initView () {
         adapter = new MyPagerAdapter(getSupportFragmentManager());
@@ -107,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
         fragment15 = new fragment15();
         fragment16 = new fragment16();
         fragment17 = new fragment17();
+        fragment18 = new fragment18();
+
         httpfragment = new httpfragment();
 
         pager.setAdapter(adapter);
