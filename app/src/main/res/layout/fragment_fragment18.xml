@@ -64,14 +64,46 @@
         android:layout_weight="6.4"
         android:background="@drawable/green_radius">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cards"
-            android:textColor="#3f5172"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_margin="20dp"/>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cards"
+                android:textColor="#3f5172"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginLeft="140dp"
+                android:text="Ascend"
+                android:textColor="@color/white"
+                android:background="@drawable/noob"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:layout_gravity="center"
+                android:id="@+id/ascend"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginLeft="20dp"
+                android:text="Descend"
+                android:textColor="@color/white"
+                android:background="@drawable/noob"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/descend"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="wrap_content"

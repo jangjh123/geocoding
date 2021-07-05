@@ -37,11 +37,11 @@
                 android:text="현재 마일리지"
                 android:textSize="17dp" />
 
-            <EditText
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:id="@+id/currentMileage"
                 android:layout_weight="5"
                 android:background="@color/white"
                 android:layout_margin="5dp"/>
@@ -60,11 +60,12 @@
                 android:gravity="center"
                 android:text="변경 후 마일리지"
                 android:textSize="17dp"/>
-            <EditText
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="5"
+                android:id="@+id/afterMileage"
                 android:background="@color/white"
                 android:layout_margin="5dp"/>
 
@@ -99,6 +100,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:hint="숫자만 입력"
+                android:id="@+id/money"
                 android:layout_weight="7"
                 android:layout_marginRight="3dp"/>
         </LinearLayout>

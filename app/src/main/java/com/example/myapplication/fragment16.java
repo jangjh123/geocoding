@@ -22,15 +22,44 @@ public class fragment16 extends Fragment implements View.OnClickListener {
 
     private TextView button1, button2, button3, button4;
     private RecyclerView recyclerView;
+    private LinearLayoutManager linearLayoutManager;
     private ArrayList<String> myList = new ArrayList<>();
+    private BaeminAdapter adapter;
     private Handler handler = new Handler();
+    private int currentItem = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fragment16, container, false);
 
-        recyclerView = view.findViewById(R.id.recyclerView);
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            currentItem = linearLayoutManager.findFirstVisibleItemPosition();
+                            recyclerView.smoothScrollToPosition(++currentItem);
+                            if (currentItem == 5) {
+                                recyclerView.smoothScrollToPosition(0);
+                                currentItem = 0;
+                            }
+                        }
+                    });
+                }
+            }
+        });
+        thread.start();
+
+                recyclerView = view.findViewById(R.id.recyclerView);
         SnapHelper snapHelper = new PagerSnapHelper();
         snapHelper.attachToRecyclerView(recyclerView);
 
@@ -41,9 +70,9 @@ public class fragment16 extends Fragment implements View.OnClickListener {
         myList.add(3, "4");
         myList.add(4, "5");
         recyclerView = view.findViewById(R.id.recyclerView);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+        linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        BaeminAdapter adapter = new BaeminAdapter(myList);
+        adapter = new BaeminAdapter(myList);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
@@ -56,6 +85,7 @@ public class fragment16 extends Fragment implements View.OnClickListener {
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
         button4.setOnClickListener(this);
+
 
         return view;
     }

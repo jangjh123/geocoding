@@ -146,6 +146,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:text="출금 요청"
+            android:id="@+id/button"
             android:background="@drawable/b_square"
             android:textColor="@color/white"/>
 

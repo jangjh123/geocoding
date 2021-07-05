@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem(fragment19);
 
         adapter.notifyDataSetChanged();
-        pager.setCurrentItem(13);
+        pager.setCurrentItem(11);
         pager.setPageTransformer(true, new ZoomOutPageTransformer());
 
     }
