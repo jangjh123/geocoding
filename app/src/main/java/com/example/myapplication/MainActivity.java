@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     fragment16 fragment16;
     fragment17 fragment17;
     fragment18 fragment18;
+    fragment19 fragment19;
     httpfragment httpfragment;
     MyPagerAdapter adapter;
 
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem(fragment16);
         adapter.addItem(fragment17);
         adapter.addItem(fragment18);
+        adapter.addItem(fragment19);
+
         adapter.notifyDataSetChanged();
         pager.setCurrentItem(13);
         pager.setPageTransformer(true, new ZoomOutPageTransformer());
@@ -114,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
         fragment16 = new fragment16();
         fragment17 = new fragment17();
         fragment18 = new fragment18();
+        fragment19 = new fragment19();
 
         httpfragment = new httpfragment();
 
